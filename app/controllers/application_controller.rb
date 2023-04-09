@@ -4,4 +4,12 @@ class ApplicationController < ActionController::Base
     render({:template =>  "calculation_templates/square_form.html.erb"})
   end
 
+
+  # params = {"number"=>"42"}
+  def calculate_square
+    @num = params.fetch("number").to_i
+    @square_of_num = @num * @num
+    render({:template => "calculation_templates/square_results.html.erb"})
+  end
+
 end
