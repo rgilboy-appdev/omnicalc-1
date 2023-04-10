@@ -10,4 +10,6 @@ get("/square_root/results", {:controller => "application", :action => "calculate
 
 get("/payment/new", {:controller => "application", :action => "blank_payment_form"})
 
+get("/payment/results", {:controller => "application", :action => "calculate_payment"})
+
 end
