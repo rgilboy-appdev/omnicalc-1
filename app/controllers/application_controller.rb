@@ -48,6 +48,18 @@ class ApplicationController < ActionController::Base
   end
 
 
+  def blank_random_form
+    render({:template => "calculation_templates/random_form.html.erb"})
+  end
+
+def random_calculator
+
+  @min = params.fetch("minimum").to_f
+  @max = params.fetch("maximum").to_f
+
+  @random = rand(@min..@max)
+  render({:template => "calculation_templates/random_results.html.erb"})
+end
 
 
 end
