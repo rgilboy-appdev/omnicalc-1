@@ -24,5 +24,9 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def blank_payment_form
+    render({:template => "calculation_templates/payment_form.html.erb"})
+  end
+  
 
 end

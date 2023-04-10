@@ -8,4 +8,6 @@ get("/square_root/new", {:controller => "application", :action => "blank_root_fo
 
 get("/square_root/results", {:controller => "application", :action => "calculate_root"})
 
+get("/payment/new", {:controller => "application", :action => "blank_payment_form"})
+
 end
